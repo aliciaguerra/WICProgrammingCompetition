@@ -17,9 +17,7 @@ System.out.println(luckOut(numbers));
 }
 
 public static int luckOut(int[] numbers) {
-for(int i=0; i<numbers.length-1;i++){
-double cubeRoot = Math.cbrt(numbers[i]);
-if(cubeRoot%1==0)
-    i++;
-else break;
+int i;
+for(i=0; i<numbers.length-1;i++) if(numbers[i]%1==0) i++;
+return i;
 }
