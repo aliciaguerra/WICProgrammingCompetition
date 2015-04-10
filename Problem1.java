@@ -1,14 +1,25 @@
+package wicprogrammingcompetition;
 import java.util.Scanner;
+import java.lang.Math;
 
-public static void main(String args[]){
+class Problem1{
+public static void main(String args[]) {
 Scanner sc = new Scanner(System.in);
 //We scan in the number of integers in the integer array.
-int intinarray=sc.NextInt();
+int intinarray=sc.nextInt();
+//We declare a new integer array that has the scanned number of elements.
+int[] numbers=new int[intinarray];
 //We scan in all the integers in the integer array.
 for(int i=0; i<intinarray-1; i++){
+    numbers[i]=sc.nextInt();
+} 
+System.out.println(luckOut(numbers));
 }
+
 public static int luckOut(int[] numbers) {
-for(int i=0; i<intinarray-1; i++){
-if(a[i]
-}
+for(int i=0; i<numbers.length-1;i++){
+double cubeRoot = Math.cbrt(numbers[i]);
+if(cubeRoot%1==0)
+    i++;
+else break;
 }
