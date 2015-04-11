@@ -1,6 +1,7 @@
 package wicprogrammingcompetition;
 import java.util.Scanner;
 import java.lang.Math;
+import static java.lang.Math.pow;
 
 class Problem1{
 public static void main(String args[]) {
@@ -18,6 +19,8 @@ System.out.println(luckOut(numbers));
 
 public static int luckOut(int[] numbers) {
 int i;
-for(i=0; i<numbers.length-1;i++) if(numbers[i]%1==0) i++;
-return i;
+for(i=0; i<numbers.length-1; i++) { 
+    if(pow(numbers[i], 1.0/3.0) % 1 == 0) i++;}
+return i; 
+}
 }
